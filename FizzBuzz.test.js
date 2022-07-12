@@ -19,12 +19,19 @@ describe("fizzbuzz", () => {
         })
     })
 
-    // describe("It handles unexpected input succesfully", () => {
+    describe("It handles unexpected input succesfully", () => {
 
-    //     each([
+        each([
+            [859359, "Fizz"],
+            [11246240, "Buzz"],
+            [300000, "FizzBuzz"]
+        ]).test("%s -> %s", (num, expected) => {
+            expect(fizzBuzz(num)).toEqual(expected);
+        })
+    })
 
-    //     ])
-    // })
+
+    
 
 
 });
